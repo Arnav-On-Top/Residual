@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Residual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="main">
+    <h1>Residual</h1>
+    <p>System is working normally.</p>
+
+    <button onclick="systemInfo()">System check</button>
+    <button onclick="settings()">Virus and threat protection</button>
+    <button onclick="storage()">Storage</button>
+    <button onclick="start()">Run Diagonistics</button>
+
+    <p id="message"></p>
+</div>
+
+<div id="loading">
+    <h2 id="loadingText">Waiting...</h2>
+
+    <div id="bar">
+        <div id="progress"></div>
+    </div>
+
+    <p id="percent">0%</p>
+    <p id="loadingMessage"></p>
+</div>
+
+<div id="result">
+    <h1>System check</h1>
+    <p id="redMessage">System scan complete</p>
+
+    <div id="information"></div>
+
+    <div id="processes">
+        Running processes<br><br>
+        browser.exe - Active<br>
+        system.exe - Active<br>
+        diagnostic.exe - Active<br>
+        <span id="unknownProcess">unknown.exe - Active</span>
+    </div>
+
+    <h2 id="warning"></h2>
+    <p id="creepy"></p>
+</div>
+
+<div id="recovery">
+    <h1>System recovery</h1>
+    <h2 id="recoveryText">Attempting system recovery...</h2>
+
+    <div id="recoveryBar">
+        <div id="recoveryProgress"></div>
+    </div>
+
+    <p id="recoveryPercent">0%</p>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

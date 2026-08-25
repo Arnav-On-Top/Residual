@@ -1,0 +1,246 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: Arial;
+    text-align: center;
+    margin: 0;
+    overflow: hidden;
+}
+
+#main {
+    padding-top: 80px;
+}
+
+h1 {
+    font-size: 45px;
+    letter-spacing: 5px;
+}
+
+p {
+    font-size: 20px;
+    color: gray;
+}
+
+button {
+    background-color: brown;
+    color: white;
+    border: 1px solid gray;
+    padding: 12px 15px;
+    margin: 7px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkred;
+    border-color: orange;
+    color: orangered;
+}
+
+#message {
+    color: gray;
+}
+
+#loading {
+    display: none;
+    padding: 80px 10% 0 10%;
+    text-align: left;
+}
+
+#loadingText {
+    color: red;
+    font-size: 32px;
+}
+
+#bar {
+    width: 100%;
+    height: 22px;
+    border: 1px solid orange;
+}
+
+#progress {
+    width: 0%;
+    height: 22px;
+    background-color: red;
+}
+
+#percent {
+    color: red;
+}
+
+#loadingMessage {
+    color: #555;
+    font-family: monospace;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+#result {
+    display: none;
+    padding: 20px 6% 0 6%;
+    text-align: left;
+}
+
+#result h1 {
+    color: red;
+    font-size: 32px;
+}
+
+#redMessage {
+    color: red;
+    font-size: 18px;
+}
+
+#information {
+    margin-top: 12px;
+    border: 1px solid red;
+    padding: 12px;
+    color: #ddd;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#processes {
+    margin-top: 12px;
+    border: 1px solid red;
+    padding: 12px;
+    color: lightgray;
+    font-family: monospace;
+    font-size: 15px;
+    line-height: 1.4;
+}
+
+#unknownProcess {
+    color: red;
+}
+
+#warning {
+    color: red;
+    font-size: 22px;
+    margin-top: 12px;
+}
+
+#creepy {
+    color: red;
+    font-family: monospace;
+    font-size: 17px;
+    line-height: 1.4;
+}
+
+#recovery {
+    display: none;
+    padding: 120px 10% 0 10%;
+}
+
+#recovery h1 {
+    color: lime;
+}
+
+#recoveryText {
+    color: lime;
+    font-size: 27px;
+}
+
+#recoveryBar {
+    width: 100%;
+    height: 22px;
+    border: 1px solid yellow;
+}
+
+#recoveryProgress {
+    width: 0%;
+    height: 22px;
+    background-color: lime;
+}
+
+#recoveryPercent {
+    color: lime;
+}
+
+.glitch {
+    animation: normalGlitch 0.08s infinite;
+}
+
+@keyframes normalGlitch {
+    0% { transform: translate(0, 0); filter: none; }
+    10% { transform: translate(12px, -5px); filter: hue-rotate(90deg); }
+    20% { transform: translate(-12px, 5px); filter: saturate(300%); }
+    30% { transform: translate(8px, 8px); filter: hue-rotate(180deg); }
+    40% { transform: translate(-8px, -8px); filter: contrast(200%); }
+    50% { transform: translate(15px, 3px); filter: hue-rotate(270deg); }
+    60% { transform: translate(-15px, -3px); filter: saturate(400%); }
+    70% { transform: translate(5px, 10px); filter: hue-rotate(90deg); }
+    80% { transform: translate(-5px, -10px); filter: contrast(250%); }
+    90% { transform: translate(10px, 5px); filter: saturate(500%); }
+    100% { transform: translate(0, 0); filter: none; }
+}
+
+.extremeGlitch {
+    animation: extremeGlitch 0.035s infinite;
+}
+
+@keyframes extremeGlitch {
+    0% { transform: translate(0, 0); filter: none; }
+    5% { transform: translate(25px, -15px); filter: hue-rotate(60deg) contrast(500%) saturate(1000%); }
+    10% { transform: translate(-30px, 15px); filter: hue-rotate(120deg) contrast(600%) saturate(1000%); }
+    15% { transform: translate(20px, 20px); filter: hue-rotate(180deg) contrast(500%) saturate(1200%); }
+    20% { transform: translate(-25px, -20px); filter: hue-rotate(240deg) contrast(700%) saturate(1000%); }
+    25% { transform: translate(30px, 5px); filter: hue-rotate(300deg) contrast(600%) saturate(1200%); }
+    30% { transform: translate(-30px, -5px); filter: hue-rotate(60deg) contrast(800%) saturate(1200%); }
+    35% { transform: translate(15px, 25px); filter: hue-rotate(120deg) contrast(700%) saturate(1400%); }
+    40% { transform: translate(-20px, -25px); filter: hue-rotate(180deg) contrast(900%) saturate(1200%); }
+    45% { transform: translate(30px, -10px); filter: hue-rotate(240deg) contrast(800%) saturate(1400%); }
+    50% { transform: translate(-30px, 10px); filter: hue-rotate(300deg) contrast(1000%) saturate(1500%); }
+    55% { transform: translate(20px, 20px); filter: hue-rotate(60deg) contrast(900%) saturate(1400%); }
+    60% { transform: translate(-25px, -15px); filter: hue-rotate(120deg) contrast(1000%) saturate(1500%); }
+    65% { transform: translate(30px, 15px); filter: hue-rotate(180deg) contrast(1100%) saturate(1500%); }
+    70% { transform: translate(-30px, -20px); filter: hue-rotate(240deg) contrast(1000%) saturate(1600%); }
+    75% { transform: translate(20px, -25px); filter: hue-rotate(300deg) contrast(1100%) saturate(1600%); }
+    80% { transform: translate(-20px, 25px); filter: hue-rotate(60deg) contrast(1200%) saturate(1700%); }
+    85% { transform: translate(30px, -10px); filter: hue-rotate(120deg) contrast(1200%) saturate(1700%); }
+    90% { transform: translate(-30px, 10px); filter: hue-rotate(180deg) contrast(1300%) saturate(1800%); }
+    95% { transform: translate(15px, -15px); filter: hue-rotate(240deg) contrast(1300%) saturate(1800%); }
+    100% { transform: translate(0, 0); filter: none; }
+}
+
+.insaneGlitch {
+    animation: insaneGlitch 0.02s infinite;
+}
+
+@keyframes insaneGlitch {
+    0% { transform: translate(0, 0); filter: none; }
+    5% { transform: translate(50px, -40px); filter: hue-rotate(60deg) contrast(1500%) saturate(1800%); }
+    10% { transform: translate(-60px, 45px); filter: hue-rotate(120deg) contrast(1700%) saturate(2000%); }
+    15% { transform: translate(55px, 50px); filter: hue-rotate(180deg) contrast(1800%) saturate(2000%); }
+    20% { transform: translate(-65px, -50px); filter: hue-rotate(240deg) contrast(1900%) saturate(2200%); }
+    25% { transform: translate(70px, 30px); filter: hue-rotate(300deg) contrast(2000%) saturate(2200%); }
+    30% { transform: translate(-70px, -30px); filter: hue-rotate(60deg) contrast(2100%) saturate(2300%); }
+    35% { transform: translate(60px, 55px); filter: hue-rotate(120deg) contrast(2200%) saturate(2400%); }
+    40% { transform: translate(-65px, -55px); filter: hue-rotate(180deg) contrast(2300%) saturate(2500%); }
+    45% { transform: translate(75px, -35px); filter: hue-rotate(240deg) contrast(2400%) saturate(2600%); }
+    50% { transform: translate(-75px, 40px); filter: hue-rotate(300deg) contrast(2500%) saturate(2700%); }
+    55% { transform: translate(65px, 50px); filter: hue-rotate(60deg) contrast(2600%) saturate(2800%); }
+    60% { transform: translate(-70px, -45px); filter: hue-rotate(120deg) contrast(2700%) saturate(2900%); }
+    65% { transform: translate(75px, 55px); filter: hue-rotate(180deg) contrast(2800%) saturate(3000%); }
+    70% { transform: translate(-80px, -50px); filter: hue-rotate(240deg) contrast(2900%) saturate(3100%); }
+    75% { transform: translate(80px, 35px); filter: hue-rotate(300deg) contrast(3000%) saturate(3200%); }
+    80% { transform: translate(-75px, 60px); filter: hue-rotate(60deg) contrast(3100%) saturate(3300%); }
+    85% { transform: translate(85px, -55px); filter: hue-rotate(120deg) contrast(3200%) saturate(3400%); }
+    90% { transform: translate(-85px, 50px); filter: hue-rotate(180deg) contrast(3300%) saturate(3500%); }
+    95% { transform: translate(90px, -60px); filter: hue-rotate(240deg) contrast(3400%) saturate(3600%); }
+    100% { transform: translate(0, 0); filter: none; }
+}
+
+body.flashScreen {
+    animation: flashScreen 0.15s infinite;
+}
+
+@keyframes flashScreen {
+    0% { background-color: black; }
+    20% { background-color: #330000; }
+    40% { background-color: black; }
+    60% { background-color: #001515; }
+    80% { background-color: #300030; }
+    100% { background-color: black; }
+}
