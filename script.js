@@ -12,6 +12,9 @@ function storage() {
     document.getElementById("message").innerHTML = "287/498 GB storage left.";
 }
 function start() {
+    var sound=document.getElementById("backgroundSound");
+    sound.volume=0.4;
+    sound.play();
     document.getElementById("main").style.display = "none";
     document.getElementById("loading").style.display = "block";
     document.getElementById("loadingText").innerHTML = "CHECKING SYSTEM...";
@@ -56,6 +59,9 @@ function start() {
         document.getElementById("loadingMessage").innerHTML =
             "> Unknown system anomaly detected.<br>> Unknown process found.";
     }, 6100);
+    setTimeout(function() {
+        window.confirm("Unknown Process Detected");
+    }, 6500);
     setTimeout(function() {
         document.getElementById("loadingText").innerHTML = "SECURITY CHECK FAILED";
         document.getElementById("loadingMessage").innerHTML =
@@ -199,6 +205,9 @@ function showFinalInformation(
             "WARNING: POSSIBLE MALWARE DETECTED.";
     }, 1500);
     setTimeout(function() {
+        window.confirm("System Information Compromised");
+    }, 2500);
+    setTimeout(function() {
         document.getElementById("warning").innerHTML =
             "WARNING: SYSTEM COMPROMISED.";
 
@@ -243,6 +252,9 @@ function showFinalInformation(
     }, 15000);
 }
 function startRecovery() {
+    var sound=document.getElementById("backgroundSound");
+    sound.pause();
+    sound.currentTime=0;
     document.getElementById("result").classList.remove("extremeGlitch");
     document.body.classList.remove("flashScreen");
     document.getElementById("result").style.display = "none";
@@ -281,6 +293,23 @@ function startRecovery() {
 
         document.getElementById("recoveryText").style.color = "red";
     }, 8000);
+    setTimeout(function() {
+        var sound=document.getElementById("backgroundSound");
+        sound.volume=1.0;
+        sound.play();
+    }, 8100);
+    setTimeout(function() {
+        window.confirm("Recovery Failed");
+    }, 8500);
+    setTimeout(function() {
+        window.confirm("Unknown Process Removal Failed");
+    }, 10000);
+    setTimeout(function() {
+        window.confirm("System Access Denied");
+    }, 11500);
+    setTimeout(function() {
+        window.confirm("System Compromised");
+    }, 12500);
     setTimeout(function() {
         document.getElementById("recoveryText").innerHTML =
             "UNKNOWN PROCESS RESTORED.";
